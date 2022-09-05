@@ -6,33 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="./script.js"></script>
     <link rel="stylesheet" href="./styles.css">
-    <title>Cookie Cove Math</title>
+    <title>Cookie Cove Math by Janae.tech</title>
 </head>
 <body>
-    <div id="canvas">
-        <img src="./assets/bg.png" id="background">
-    <div id="welcome" ><!--Welcome Screen-->
-        <img src="./assets/title.png" class="welcome-screen" id="title-image"><!--title image-->
-        <button class="welcome-screen" id="play-btn">PLAY</button><!--play button-->
-    </div>
-    <div id="instructions" ><!--Instructions screen-->
-        <img src="./assets/player.png" class="instruction-screen" id="player"><!--character image-->
-        <pre class="instruction-screen">
-            The beautiful land of Cookie Cove has been 
-            invaded by an evil army of Mongzoids. 
-            Their goal is to destroy all sweetness of our land.
-            We need you to defeat them and save the cookiesphere! 
-        </pre><!--game instructions-->
-        <button class="instruction-screen">Let's Go</button>
-    </div>
-    <div class="play-screen"><!--game play screen--> 
-        <input>
-
-
-    </div>
-
-    </div>
     
+    <div id="sky"></div>
+    <div id="clouds"></div>
+    <div id="cookies"></div>
+
+    <div id="container">
+
+        
+        <div class="game-container">
+            <img id="game-board"><!--cookie cove title and game block-->
+            <button id="start-btn">Let's Play</button>
+            <img class ="redhearts" id="redheart1">
+            <img class ="redhearts" id="redheart2">
+            <img class ="redhearts" id="redheart3">
+            <img class ="greyhearts" id="greyheart1">
+            <img class ="greyhearts" id="greyheart2">
+            <img class ="greyhearts" id="greyheart3">
+
+
+        </div>
+        <div>
+            <p id="equation"></p>
+            <input id="game-input" type="text">
+            <button id="submit-btn">Submit</button>
+        </div>
+        <div>
+            <p id="win">
+                Hooray! <br>
+                You've completed the challenge <br>
+                and saved Cookie Cove! 
+
+            </p>
+            <p id="lose">
+                Try Again.
+
+            </p>
+            <button id="restart" type="submit">Ok</button>
+        </div>
+
+    </div>   
     
 </body>
 </html>
