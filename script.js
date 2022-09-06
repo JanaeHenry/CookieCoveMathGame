@@ -18,59 +18,98 @@
 
 // }
 
+//setupQuestion should be called after every time player submit answers. Do until healt is 0 or correct is 7!!!!!!!!!!
 
-
+let displayMath = document.getElementById('equation');
+let gameInput = document.getElementById('game-input');
+const submitBtn = document.getElementById('submit-btn');
+const startButton = document.getElementById('start-btn');
+let mathEquation;
 
 class Player { 
-  constructor(health = 3) {
-    this.health = health;
+  constructor(health = 3, correct = 0) {
+    this.health = health,
+    this.correct = correct
     
   }
-  submitAnswer() {
-    submitBtn.addEventListener('click', () => {
-      let gameInput = document.getElementById('game-input').value;
-      gameInput.value = '';
-      let a = Math.floor(Math.random()* 11);
-      let b = Math.floor(Math.random()* 11);
-      let displayMath = document.getElementById('equation');
-      let mathEquation = a + b;
-      displayMath.value = `${a} '+' ${b} '='`;
+  
 
-      if((gameInput !== mathEquation) && (this.health === 1)){
-        this.health -= 1;
-        redHeart1.style.visibility = 'hidden';
-        greyHeart1.style.visibility = 'visible';
-        endGame()
-      } else if ((gameInput !== mathEquation) && (this.health === 2)){
-        this.health -= 1;
-        redHeart2.style.visibility = 'hidden';
-        greyHeart2.style.visibility = 'visible';
-        runGame();
-      } else if ((gameInput !== mathEquation) && (this.health === 3)){
-        this.health -= 1;
-        redHeart3.style.visibility = 'hidden';
-        greyHeart3.style.visibility = 'visible';
-        runGame();
-      }
-      // (gameInput === mathEquation) && this.health > 0
-      }
-    })
-  }
+    
 }
 
+const Player1 = new Player('Player 1');
+
+const setupQuestion = () => {
+  let a = Math.floor(Math.random()* 11);
+  let b = Math.floor(Math.random()* 11);
+  mathEquation = a + b;
+ 
+  displayMath.innerText = `${a} + ${b} =`;
+
+}
+
+const submitAnswer = () => {
+          
+  // gameInput.value = '';
+  let playerInput = parseInt(gameInput.value);
+  
+  if((playerInput !== mathEquation) && (Player1.health === 1)){
+    Player1.health -= 1;
+    redHeart1.style.visibility = 'hidden';
+    greyHeart1.style.visibility = 'visible';
+    endGame()
+    console.log('health = 1')
+  } else if ((playerInput !== mathEquation) && (Player1.health === 2)){
+    Player1.health -= 1;
+    redHeart2.style.visibility = 'hidden';
+    greyHeart2.style.visibility = 'visible';
+    alert('wrong answer')
+    runGame();
+    console.log('health = 2')
+  } else if ((playerInput !== mathEquation) && (Player1.health === 3)){
+    Player1.health -= 1;
+    redHeart3.style.visibility = 'hidden';
+    greyHeart3.style.visibility = 'visible';
+    alert('wrong answer')
+    runGame();
+    console.log('health = 3')
+  } else if ((playerInput === mathEquation) && (Player1.correct < 7)){
+    Player1.correct++;
+    runGame();
+    console.log('health = 4')
+  } else if ((playerInput === mathEquation) && (Player1.correct === 7)){
+    winGame();
+    console.log('health = 5')
+
+  } else if (Player1.health === 0) {
+    endGame();
+  }
+ setupQuestion();
+ gameInput.value = '';
+
+  }
+
+console.log(Player1.health)
+
+
+submitBtn.addEventListener('click', () => {
+  submitAnswer();
+  
+ })
+
+  
 
 
 
 
 
 
-let startButton = document.getElementById('start-btn');
 
 
 
 
 
-let submitBtn = document.getElementById('submit-btn');
+
 
 const redHearts = document.getElementsByClassName('redhearts');
 
@@ -95,24 +134,35 @@ window.onload = () => {
 
 
 function startGame() {
-  event.preventDefault();
+  // preventDefault();
+  setupQuestion();
   displayMath.style.visibility = 'visible';
   gameInput.style.visibility = 'visible';
   submitBtn.style.visibility = 'visible';
+  startButton.style.visibility = 'hidden';
 
 }
 
 function runGame() {
-  event.preventDefault();
+  // preventDefault();
 
 }
 
 function endGame() {
-  event.preventDefault();
+  // preventDefault();
   let lose = document.getElementById('lose');
   lose.style.display = 'block';
   restart.style.display = 'block';
+  alert('Try again');
 
+}
+ 
+function winGame() {
+  // preventDefault();
+  let win = document.getElementById('win');
+  win.style.display = 'block';
+  restart.style.display = 'block';
+  alert('Hooray');
 }
 
 startButton.addEventListener('click', startGame);

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="./script.js"></script>
+    <script defer src="script.js"></script>
     <link rel="stylesheet" href="./styles.css">
     <title>Cookie Cove Math by Janae.tech</title>
 </head>
@@ -18,21 +18,26 @@
 
         
         <div class="game-container">
-            <img id="game-board"><!--cookie cove title and game block-->
+            <img id="game-board" src="./assets/bgscreen.png"><!--cookie cove title and game block-->
             <button id="start-btn">Let's Play</button>
-            <img class ="redhearts" id="redheart1">
-            <img class ="redhearts" id="redheart2">
-            <img class ="redhearts" id="redheart3">
-            <img class ="greyhearts" id="greyheart1">
-            <img class ="greyhearts" id="greyheart2">
-            <img class ="greyhearts" id="greyheart3">
+            <img class ="redhearts" id="redheart1" src="./assets/redheart.png" height="">
+            <img class ="redhearts" id="redheart2"src="./assets/redheart.png">
+            <img class ="redhearts" id="redheart3"src="./assets/redheart.png">
+            <img class ="greyhearts" id="greyheart1" src="./assets/greyheart.png">
+            <img class ="greyhearts" id="greyheart2" src="./assets/greyheart.png">
+            <img class ="greyhearts" id="greyheart3" src="./assets/greyheart.png">
 
 
         </div>
         <div>
             <p id="equation"></p>
-            <input id="game-input" type="text">
-            <button id="submit-btn">Submit</button>
+            <!-- <input id="game-input" type="text">
+            <button id="submit-btn">Submit</button> -->
+
+            <form>
+                <input type="text" id="game-input"><br><br>
+                <input type="button" value="Submit" id="submit-btn">
+              </form> 
         </div>
         <div>
             <p id="win">
