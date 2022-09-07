@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="script.js"></script>
     <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet"> 
     <title>Cookie Cove Math by Janae.tech</title>
+
 </head>
 <body>
     
@@ -14,46 +18,52 @@
     <div id="clouds"></div>
     <div id="cookies"></div>
 
-    <div id="container">
+    <div class="global">
+
+        <div id="container">
 
         
-        <div class="game-container">
-            <img id="game-board" src="./assets/bgscreen.png"><!--cookie cove title and game block-->
-            <button id="start-btn">Let's Play</button>
-            <img class ="redhearts" id="redheart1" src="./assets/redheart.png" height="">
-            <img class ="redhearts" id="redheart2"src="./assets/redheart.png">
-            <img class ="redhearts" id="redheart3"src="./assets/redheart.png">
-            <img class ="greyhearts" id="greyheart1" src="./assets/greyheart.png">
-            <img class ="greyhearts" id="greyheart2" src="./assets/greyheart.png">
-            <img class ="greyhearts" id="greyheart3" src="./assets/greyheart.png">
+            <div class="game-container">
+                <img id="game-board" src=""><!--cookie cove title and game block-->
+                <button id="start-btn" class="buttons">Play</button>
+               
+                <!-- <img class ="redhearts" id="redheart1" src="./assets/redheart.png">
+                <img class ="redhearts" id="redheart2"src="./assets/redheart.png">
+                <img class ="redhearts" id="redheart3"src="./assets/redheart.png">
+                <img class ="greyhearts" id="greyheart1" src="./assets/greyheart.png">
+                <img class ="greyhearts" id="greyheart2" src="./assets/greyheart.png">
+                <img class ="greyhearts" id="greyheart3" src="./assets/greyheart.png"> -->
+    
+    
+            </div>
+            <div>
+                <p id="equation"></p>
+                <!-- <input id="game-input" type="text">
+                <button id="submit-btn">Submit</button> -->
+    
+                <form>
+                    <input type="text" id="game-input"><br><br>
+                    <input type="button" value="Submit" id="submit-btn" class="buttons">
+                  </form> 
+            </div>
+            <!-- <div>
+                <p id="win">
+                    Hooray! <br>
+                    You've completed the challenge <br>
+                    and saved Cookie Cove! 
+    
+                </p>
+                <p id="lose">
+                    Try Again.
+    
+                </p>
+                <button id="restart" type="submit">Ok</button>
+            </div> -->
+    
+        </div>   
 
-
-        </div>
-        <div>
-            <p id="equation"></p>
-            <!-- <input id="game-input" type="text">
-            <button id="submit-btn">Submit</button> -->
-
-            <form>
-                <input type="text" id="game-input"><br><br>
-                <input type="button" value="Submit" id="submit-btn">
-              </form> 
-        </div>
-        <div>
-            <p id="win">
-                Hooray! <br>
-                You've completed the challenge <br>
-                and saved Cookie Cove! 
-
-            </p>
-            <p id="lose">
-                Try Again.
-
-            </p>
-            <button id="restart" type="submit">Ok</button>
-        </div>
-
-    </div>   
+    </div>
+    
     
 </body>
 </html>
