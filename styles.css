@@ -37,18 +37,14 @@
     height:50px;
 } */
 
-
-.game-container{
-    display: flex;
-    justify-content: center;
-}
+/* 
 
 #game-board{
-    /* position: absolute; */
+    position: absolute;
     z-index: 1;
     padding-top: 25px;
     position: relative;
-}
+} */
 
 
 .global{
@@ -76,17 +72,43 @@
 
 } 
 
+/* .game-container{
+    width: 800px;
+    height: 800px;
+    display: flex;
+     margin-left: auto;
+     margin-right: auto 
+ } */
+ 
+
+.game-play{
+    display: flex;
+    width: 700px;
+    height: 600px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.3);
+    
+}
+
 #equation{
     font-family: 'Fredoka One', cursive;
     font-size: 120px;
     font-weight: 400;
     letter-spacing: .1em;
     color: #3227a3;
+    margin-top: 15px;
+    margin-bottom: 60px;
 }
 
 form{
-    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    
 }
+
+
 
 /* Button CSS */
 .game-container #start-btn{
@@ -101,7 +123,7 @@ form{
     color: white;
     /* font-size: 16px; */
     /* padding: 12px 24px; */
-    margin-top: 600px;
+    /* margin-top: 600px; */
     border: none;
     /* cursor: pointer; */
     /* border-radius: 5px; */
@@ -109,10 +131,11 @@ form{
 }
 
 input[type=text] {
-    width: 25%;
-    padding: 12px 10px;
-    margin: 8px 0;
-    box-sizing: border-box;
+    display:flex;
+    /* width: 75%; */
+    /* padding: 12px 10px; */
+    /* margin: 8px 0; */
+    /* box-sizing: border-box; */
     border: none;
     border-bottom: 3px solid #ad3af0;
     font-size: 36px;
@@ -121,7 +144,8 @@ input[type=text] {
 
 
 .buttons {
-  /* margin: 10px; */
+    display:flex;
+  margin: 10px;
   padding: 15px 30px;
   text-align: center;
   text-transform: uppercase;

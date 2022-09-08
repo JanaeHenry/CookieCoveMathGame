@@ -68,7 +68,7 @@ const setupQuestion = () => {
   let b = Math.floor(Math.random()* 11);
   mathEquation = a + b;
  
-  displayMath.innerText = `${a} + ${b} =`;
+  displayMath.innerText = `${a} + ${b}`;
 
 }
 
@@ -77,12 +77,6 @@ const submitAnswer = () => {
   // gameInput.value = '';
   let playerInput = parseInt(gameInput.value);
 
-
-
-
-  
-
-  
   if((playerInput !== mathEquation) && (hearts.length === 1)){
     hearts.pop();
     // redHeart1.style.visibility = 'hidden';
@@ -128,23 +122,6 @@ submitBtn.addEventListener('click', () => {
   submitAnswer();
   
  })
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 window.onload = () => {
   gameBoard.style.visibility = 'visible';
