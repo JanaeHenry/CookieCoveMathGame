@@ -52,7 +52,7 @@
     background: linear-gradient(-35deg, #2db8bd, #8fd4f2, #3a8af0 );
     background-size: 400% 400%;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     animation: grad 10s ease infinite;
    
 
@@ -72,13 +72,29 @@
 
 } 
 
-/* .game-container{
+p{
+    color: #3227a3; 
+    font-family: 'Fredoka One', cursive;
+    font-size: 28px;
+    font-weight: 80;
+    line-height: 1.5em;
+    text-align: center;
+    text-shadow: 2px 2px #3a8af0;
+    
+   
+}
+
+.game-container{
     width: 800px;
     height: 800px;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 200px ;
      margin-left: auto;
      margin-right: auto 
- } */
+ }
  
 
 .game-play{
@@ -89,6 +105,7 @@
     align-items: center;
     flex-direction: column;
     background-color: rgba(255, 255, 255, 0.3);
+    
     
 }
 
@@ -102,6 +119,12 @@
     margin-bottom: 60px;
 }
 
+/* #start-btn{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+} */
+
 form{
     display: flex;
     flex-wrap: wrap;
@@ -111,20 +134,20 @@ form{
 
 
 /* Button CSS */
-.game-container #start-btn{
+.game-container .game-instructions #start-btn{
+    /* position: relative; */
+    /* z-index: 3; */
     /* position: absolute; */
-    z-index: 2;
-    position: absolute;
     /* top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%); */
-    background-color: #555;
-    color: white;
+    /* background-color: #555;
+    color: white; */
     /* font-size: 16px; */
     /* padding: 12px 24px; */
     /* margin-top: 600px; */
-    border: none;
+    /* border: none; */
     /* cursor: pointer; */
     /* border-radius: 5px; */
     /* text-align: center; */
@@ -144,7 +167,7 @@ input[type=text] {
 
 
 .buttons {
-    display:flex;
+    /* display:flex; */
   margin: 10px;
   padding: 15px 30px;
   text-align: center;
