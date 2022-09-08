@@ -80,9 +80,11 @@ p{
     line-height: 1.5em;
     text-align: center;
     text-shadow: 2px 2px #3a8af0;
+    margin-top: 220px;
     
    
 }
+
 
 .game-container{
     width: 800px;
@@ -108,6 +110,11 @@ p{
     
     
 }
+
+/* #monster1{
+    max-width: 40%;
+    max-height: 40%;
+} */
 
 #equation{
     font-family: 'Fredoka One', cursive;

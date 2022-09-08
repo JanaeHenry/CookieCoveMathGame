@@ -24,6 +24,7 @@ let displayMath = document.getElementById('equation');
 let gameInput = document.getElementById('game-input');
 const submitBtn = document.getElementById('submit-btn');
 const startButton = document.getElementById('start-btn');
+const gameInstructions = document.getElementById('game-instructions');
 
 // const redHearts = document.getElementsByClassName('redhearts');
 
@@ -139,7 +140,8 @@ function startGame() {
   displayMath.style.visibility = 'visible';
   gameInput.style.visibility = 'visible';
   submitBtn.style.visibility = 'visible';
-  startButton.style.visibility = 'hidden';
+  startButton.style.display = 'none';
+  gameInstructions.style.display = 'none';
 
 }
 
