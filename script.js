@@ -25,6 +25,7 @@ let gameInput = document.getElementById('game-input');
 const submitBtn = document.getElementById('submit-btn');
 const startButton = document.getElementById('start-btn');
 const gameInstructions = document.getElementById('game-instructions');
+const bottomImage = document.getElementById('bottom-image');
 
 // const redHearts = document.getElementsByClassName('redhearts');
 
@@ -45,9 +46,6 @@ let win = document.getElementById('win');
 let mathEquation;
 
 let hearts = [1, 2, 3];
-
-
-
 
 
 
@@ -75,7 +73,7 @@ const setupQuestion = () => {
 
 const submitAnswer = () => {
           
-  // gameInput.value = '';
+
   let playerInput = parseInt(gameInput.value);
 
   if((playerInput !== mathEquation) && (hearts.length === 1)){
@@ -102,21 +100,20 @@ const submitAnswer = () => {
     Player1.correct++;
     runGame();
     console.log('health = 4')
-  } else if ((playerInput === mathEquation) && (Player1.correct >= 6)){ // change so that hooray message alerts immediately after 7th correct answer is entered
+  } else if ((playerInput === mathEquation) && (Player1.correct >= 6)){ 
     winGame();
     console.log('health = 5')
 
   } else if (hearts.length == 0 ) {
     endGame();
   }
+
  setupQuestion();
  gameInput.value = '';
  console.log(Player1.correct)
  console.log(hearts.length)
 
   }
-
-
 
 
 submitBtn.addEventListener('click', () => {
@@ -128,39 +125,39 @@ window.onload = () => {
   gameBoard.style.visibility = 'visible';
   startButton.style.visibility = 'visible';
   displayMath.style.visibility = 'hidden';
-  gameInput.style.visibility = 'hidden';
-  submitBtn.style.visibility = 'hidden';
+  gameInput.style.display = 'none';
+  submitBtn.style.display = 'none';
 
 }
 
 
 function startGame() {
-  // preventDefault();
-  setupQuestion();
+   setupQuestion();
   displayMath.style.visibility = 'visible';
-  gameInput.style.visibility = 'visible';
-  submitBtn.style.visibility = 'visible';
+  gameInput.style.display = 'flex';
+  submitBtn.style.display = 'flex';
   startButton.style.display = 'none';
   gameInstructions.style.display = 'none';
+  
+  
 
 }
 
 function runGame() {
-  // preventDefault();
-
+  
 }
 
 function endGame() {
-  // preventDefault();
+
   
   // lose.style.display = 'block';
   // restart.style.display = 'block';
   alert('Restart game and try again');
-
+  restart();
 }
  
 function winGame() {
-  // preventDefault();
+
   
   // win.style.display = 'block';
   // restart.style.display = 'block';
@@ -204,50 +201,4 @@ startButton.addEventListener('mouseup', startGame);
 
 
 
-//////////////////////////////////    Old Code    //////////////////////////////////////////////////
-
-//Title pop-in animation function
-// const title = document.getElementById('title-image');
-
-// const titleAnimation = () => {
-//     title.style.transitionDuration = '0.3s';
-//     title.style.transform = `translate(-50%, -50%) scale(1.5)`;
-
-//     setTimeout(() => {
-//     title.style.transitionDuration = '0.3s';
-//     title.style.transform = `translate(-50%, -50%) scale(1.5)`;
-//     }, 200);
-// }
-
-//Start game when play button is clicked
-// const play = document.getElementById('play-btn');
-
-// const instructions = document.querySelectorAll('.instruction-screen')
-
-//Window onload
-// window.onload = () => {
-//     // titleAnimation();
-//     document.getElementById('instructions').querySelectorAll('instruction-screen').style.visibility = 'hidden';
-//     document.querySelector('play-screen').style.visibility = 'hidden';
-//     document.getElementsByClassName('game-complete').style.visibility = 'hidden';
-// }
-
-// play.addEventListener('click', () => {
-//     play.style.visibility = 'hidden';
-//     title.style.visibility = 'hidden';
-//     instructions.style.visibility = 'visible';
-//   })
-
-  //Addition game
-//   let submit = document.getElementsByTagName('submit');
-//   let number1 = Math.floor(Math.random(/[0-9]/));
-//   let number2 = Math.floor(Math.random(/[0-9]/));
-//   let total = number1 + number2;
-//   let response = parseInt(submit);
-
-//   const nextQuestion = () => {
-
-//   }
-
-//   game.addEventListener('click', nextQuestion())
   
